@@ -1,23 +1,169 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+/* Reset styles */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin:0;
-    padding:0;
 }
 
-html,
+/* Body and overall font styling */
 body {
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
     color: #111;
 }
 
-.logo {
-    position: absolute;
-    top: 30px;
-    left: 100px;
-    font-size: 2rem;
+/* Header and navigation styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle {
+    display: none; /* Add logic for a mobile menu toggle later if needed */
+}
+
 .navigation {
-    display: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation li {
+    position: relative;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.navigation a:hover {
+    background-color: white;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Social bar styles */
+.social-bar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.social-bar li {
+    position: relative;
+}
+
+.social-bar a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-bar a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-bar img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Email icon for consistency */
+.email-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ff5e57;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.email-icon img {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1);
+}
+
+/* Section styles */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/home-img.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.home-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff5e57;
+    color: white;
+    padding: 10px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e04d4a;
 }
